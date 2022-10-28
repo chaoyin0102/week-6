@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="view-port" content="width=device-width, initial-scale=1.0">
+    <title>登入頁面</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='week4.css')}}">
+</head>
+<body>
+    <div class="header">歡迎光臨，這是會員頁</div>
+    <div class="welcome">{{ name }}，歡迎登入系統</div>
+    <br/>
+    <a href="/signout">登出系統</a>
+</body>
+</html>
