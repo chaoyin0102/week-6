@@ -7,7 +7,7 @@ import os # for secret key
 mydb = mysql.connector.connect(
     host = "localhost",
     user = "root",
-    password = "an890147",
+    password = "*********",
     database = "website"
 )
 cursor = mydb.cursor(dictionary=True)
