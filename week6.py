@@ -37,13 +37,13 @@ def signup():
     username = request.form.get("username")
     password = request.form.get("password")
     # check if username exists or not using MySQL
-    cursor.execute("SELECT * FROM member WHERE username=%s LIMIT 1", (username,))
+    cursor.execute("SELECT * FROM member WHERE username=%s LIMIT 1", (username))
     check_exist = cursor.fetchone()
-    if check_exist is None:
+    if check_exist:
         return redirect("/error?message=帳號已經被註冊")
     else:
         # create membet in table "member"
-        cursor.execute("INSERT INTO member(name, username, password) VALUES(%s, %s, %s)", (name, username, password,))
+        cursor.execute("INSERT INTO member(name, username, password) VALUES(%s, %s, %s)", (name, username, password))
         mydb.commit()
         return redirect("/")
     
@@ -54,7 +54,7 @@ def signin():
     # get username, password from form by POST
     username = request.form.get("username")
     password = request.form.get("password")
-    cursor.execute("SELECT * FROM member WHERE username=%s AND password=%s", (username, password,))
+    cursor.execute("SELECT * FROM member WHERE username=%s AND password=%s", (username, password))
     member = cursor.fetchone()
     if member:
         # create session
