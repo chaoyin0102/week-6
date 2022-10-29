@@ -38,7 +38,7 @@ CREATE TABLE `member` (
   `follower_count` int unsigned NOT NULL DEFAULT '0',
   `time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -47,7 +47,7 @@ CREATE TABLE `member` (
 
 LOCK TABLES `member` WRITE;
 /*!40000 ALTER TABLE `member` DISABLE KEYS */;
-INSERT INTO `member` VALUES (1,'test','test','test',0,'2022-10-19 23:29:05'),(2,'Tina','Tina','1234',161,'2022-10-19 23:29:43'),(3,'Jamie','Jamie','5678',532,'2022-10-19 23:29:49'),(4,'Nell','Nell','1357',1785,'2022-10-19 23:29:54'),(5,'Risa','Risa','2468',424,'2022-10-19 23:29:59');
+INSERT INTO `member` VALUES (1,'test','test','test',0,'2022-10-19 23:29:05'),(2,'Tina','Tina','1234',161,'2022-10-19 23:29:43'),(3,'Jamie','Jamie','5678',532,'2022-10-19 23:29:49'),(4,'Nell','Nell','1357',1785,'2022-10-19 23:29:54'),(5,'Risa','Risa','2468',424,'2022-10-19 23:29:59'),(6,'haha','haha','1234',0,'2022-10-29 00:36:11'),(7,'ohoh','ohoh','5678',0,'2022-10-29 00:37:36'),(8,'git','git','0000',0,'2022-10-29 15:01:17');
 /*!40000 ALTER TABLE `member` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -89,4 +89,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-20  2:30:45
+-- Dump completed on 2022-10-29 15:06:34
